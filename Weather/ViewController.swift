@@ -51,7 +51,8 @@ class ViewController: UIViewController {
 
   func getCurrentWeather(cityName: String) {
     //호출할 api주소
-    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=83a9e8711a6b8cb7a37a02fba326e33d") else { return }
+    let api = Bundle.main.apiKey
+    guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=\(api)") else { return }
     let session = URLSession(configuration: .default)
     //dataTask가 api호출 서버에서 응답이 오면 Completion Handler 클로져가 호출됨
     //data에는 서버에서 응답받은 데이터가 전달됨, response는 http헤더 및 http 상태코드, error 요청 실패시 에러객체 전달 요청 성공시nil
