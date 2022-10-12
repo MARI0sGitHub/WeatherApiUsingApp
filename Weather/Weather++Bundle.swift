@@ -1,9 +1,4 @@
-//
-//  Weather++Bundle.swift
-//  Weather
-//
-//  Created by MAC BOOK PRO 2013 EARLY on 2022/09/03.
-//
+
 
 import Foundation
 
